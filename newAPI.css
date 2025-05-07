@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box !important;
+}
+body{
+    box-sizing: border-box !important;
+    font-family: "Roboto", sans-serif;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(rgba(27, 27, 27, 0.479), rgba(27, 27, 27, 0.479)), url(./pexels-marek-piwnicki-3907296-17835311.jpg) center center no-repeat;
+    background-size: cover;
+    color: white;
+}
+.parent{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: "Oswald", sans-serif;
+    font-weight: 700;
+}
+.first-child{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+}
+.date{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+.line{
+    width: 20px;
+    height: 5px;
+    display: block;
+    background-color: white;
+}
+.weatherValue{
+    font-size: 5em;
+}
+.weatherDetails{
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+.weatherDetails h1{
+    line-height: 1em;
+}
+.inputContainer{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+}
+.inputContainer input{
+    width: 90%;
+    padding: 15px;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+}
+.inputContainer button{
+    width: 10%;
+    padding: 15px;
+    color: white;
+    border: none;
+    background-color:navy;
+    outline: none;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+.inputContainer button:hover{
+    cursor: pointer;
+    background-color:rgb(1, 1, 99);
+    transition: 0.2s ease-in-out;
+}
+.second-child{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to top,rgba(0, 0, 128, 0.8), rgba(0, 0, 128, 0));
+    padding: 20px 5%;
+    filter: drop-shadow(1);
+    backdrop-filter: blur(4px);
+}
+.forecast{
+    display: flex;
+    gap: 1.3em;
+    font-size: 1em;
+    align-items: center;
+}
+.forecast div{
+    text-align: center;
+    font-size: 400;
+}
+#weatherMain{
+    font-size: 3em;
+}
+#weatherDesc p{
+    color: rgb(192, 192, 252);
+}
+.middle-child{
+    align-self: center;
+}
+.middle-child img{
+    width: 200px;
+}
