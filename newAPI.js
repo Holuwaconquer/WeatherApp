@@ -43,7 +43,7 @@ else if(currentMonth === 10){
     month.textContent = "Nov"
 }
 else{
-    month.textContent = "Degtc"
+    month.textContent = "Dec"
 }
 
 if(currentDate.length ===1){
@@ -67,10 +67,9 @@ search.addEventListener('click', ()=>{
             weatherMain.textContent = weatherInfo.main
             weatherDescription.textContent = weatherInfo.description
             humidity.textContent = data.main.humidity + '%'
-            weatherPresure.textContent = data.main.pressure
+            weatherPresure.textContent = data.main.pressure + 'hPa'
             cityName.textContent = data.name + ' , ' + data.sys.country
             document.getElementById('weatherImg').src= `https://openweathermap.org/img/wn/${weatherInfo.icon}@4x.png`
-            console.log(data);
         })
     })
     let newAPI = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${ApiKey}`
@@ -101,7 +100,6 @@ search.addEventListener('click', ()=>{
                     hour12: true
                   };
                   const time = dateTime.toLocaleTimeString('en-US', options);
-                  console.log(time);
                   
                 document.getElementById('forecast').innerHTML += `
                     <div style="line-height: 1em;">
@@ -111,12 +109,7 @@ search.addEventListener('click', ()=>{
                     </div>
                 `
     
-                console.log(forecastData);  
             })
-            // console.log(todayForecast);
-            
-
-            // console.log(currentDayForecast);
             
         })
     })
