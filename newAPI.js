@@ -5,45 +5,45 @@ let weatherMain = document.getElementById('weatherMain')
 let weatherDescription = document.getElementById('weatherDescription')
 let weatherPresure = document.getElementById('weatherPresure')
 let humidity = document.getElementById('humidity')
-let currentDay = new Date("2025/05/10")
+let currentDay = new Date()
 let currentDate = currentDay.getDate().toString()
 let currentMonth = currentDay.getMonth()
 
-if(currentMonth === 1){
+if(currentMonth === 0){
     month.textContent = "Jan"
 }
-else if(currentMonth === 2){
+else if(currentMonth === 1){
     month.textContent = "Feb"
 }
-else if(currentMonth === 3){
+else if(currentMonth === 2){
     month.textContent = "Mar"
 }
-else if(currentMonth === 4){
+else if(currentMonth === 3){
     month.textContent = "Apr"
 }
-else if(currentMonth === 5){
+else if(currentMonth === 4){
     month.textContent = "May"
 }
-else if(currentMonth === 6){
+else if(currentMonth === 5){
     month.textContent = "Jun"
 }
-else if(currentMonth === 7){
+else if(currentMonth === 6){
     month.textContent = "Jul"
 }
-else if(currentMonth === 8){
+else if(currentMonth === 7){
     month.textContent = "Aug"
 }
-else if(currentMonth === 9){
+else if(currentMonth === 8){
     month.textContent = "Sep"
 }
-else if(currentMonth === 10){
+else if(currentMonth === 9){
     month.textContent = "Oct"
 }
-else if(currentMonth === 11){
+else if(currentMonth === 10){
     month.textContent = "Nov"
 }
 else{
-    month.textContent = "Dec"
+    month.textContent = "Degtc"
 }
 
 if(currentDate.length ===1){
@@ -79,7 +79,7 @@ search.addEventListener('click', ()=>{
             const forecastData = item.list;
             
             // Get the forecast for the current day
-            const newcurrentDate = new Date("2025/05/10");
+            const newcurrentDate = new Date();
             const currentDayForecast = forecastData.filter((forecast) => {
                 const forecastDate = new Date(forecast.dt * 1000);
                 return forecastDate.getDate() === newcurrentDate.getDate();
